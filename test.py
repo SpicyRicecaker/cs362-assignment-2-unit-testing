@@ -1,12 +1,15 @@
+"""Holds the testscases for the credit_card_validator."""
 import unittest
+from credit_card_validator import credit_card_validator
 
-def add_two(x):
-    return x + 3
 
 class TestCase(unittest.TestCase):
-    def test_add_five(self):
-        x = 5
-        self.assertEqual(add_two(x), x + 2)
+    """Text fixture for the testcases for credit card validator."""
+
+    def test1(self):
+        """Test testing function."""
+        self.assertFalse(credit_card_validator(2))
+
 
 if __name__ == '__main__':
     unittest.main(verbosity=2)

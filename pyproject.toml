@@ -1,0 +1,13 @@
+[tool.ruff]
+# Set the maximum line length. The default is 88.
+line-length = 79
+
+[tool.ruff.lint]
+# Enable pycodestyle (PEP 8) error and warning rules.
+select = ["E", "W"]
+
+[tool.ruff.format]
+# You can specify quote and indentation styles if you deviate
+# from the Black-inspired defaults.
+quote-style = "double"
+indent-style = "space"
