@@ -1,0 +1,21 @@
+Credit Card Number Validator
+- Must be Either a Visa, MasterCard, or American Express Number
+- Must be all numbers
+- If Visa
+    - Length is 16
+    - Prefix is 4
+- If MasterCard
+    - Length is 16
+    - Prefix is 51-55 and 2221-2720
+- If American Express
+    - Length is 15
+    - Prefix is either 34 or 37
+
+---
+
+Obvious ones are
+- 1x Length is 0
+- 6x Card company prefix is associated with incorrect length
+- 1x non-numeric character
+- 1x checksum is invalid
+- 1x entirely invalid prefix
