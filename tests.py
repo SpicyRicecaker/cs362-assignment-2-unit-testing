@@ -225,37 +225,43 @@ class TestCase(unittest.TestCase):
 
     def test_american_express_34(self):
         """Asserts an american express number with a valid checksum, non-alpha
-        characters, a prefix of 34 and a length of 15 should be valid."""
+        characters, a prefix of 34 and a length of 15 should be valid.
+        Important for checksum category."""
         num = num_with_checksum("34123123123123")
         self.assertTrue(credit_card_validator(num))
 
     def test_american_express_37(self):
         """Asserts an american express number with a valid checksum, non-alpha
-        characters, a prefix of 37 and a length of 15 should be valid."""
+        characters, a prefix of 37 and a length of 15 should be valid.
+        Important for regular testing."""
         num = num_with_checksum("37123123123123")
         self.assertTrue(credit_card_validator(num))
 
     def test_american_express_34_length_small(self):
         """Asserts an american express number with a valid checksum, non-alpha
-        characters, and a length of 16 should be invalid."""
+        characters, and a length of 16 should be invalid.
+        Important for size testing."""
         num = num_with_checksum("341231231231231")
         self.assertFalse(credit_card_validator(num))
 
     def test_american_express_34_length_big(self):
         """Asserts an american express number with a valid checksum, non-alpha
-        characters, and a length of 14 should be invalid."""
+        characters, and a length of 14 should be invalid.
+        Important for size testing."""
         num = num_with_checksum("3412312312312")
         self.assertFalse(credit_card_validator(num))
 
     def test_american_express_37_length_small(self):
         """Asserts an american express number with a valid checksum, non-alpha
-        characters, and a length of 16 should be invalid."""
+        characters, and a length of 16 should be invalid.
+        Important for size testing."""
         num = num_with_checksum("371231231231231")
         self.assertFalse(credit_card_validator(num))
 
     def test_american_express_37_length_big(self):
         """Asserts an american express number with a valid checksum, non-alpha
-        characters, and a length of 14 should be invalid."""
+        characters, and a length of 14 should be invalid.
+        Important for size testing."""
         num = num_with_checksum("3712312312312")
         self.assertFalse(credit_card_validator(num))
 
